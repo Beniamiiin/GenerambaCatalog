@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+import UIKit
+
+final class {{ module_info.name }}DataSource: SectionedDataSource {
+
+    // MARK: - Override variables
+
+    override func registerCells() {
+        tableView?.register({{ module_info.name }}CellModel.cellNib,
+                            forCellReuseIdentifier: {{ module_info.name }}CellModel.cellIdentifier)
+    }
+
+}

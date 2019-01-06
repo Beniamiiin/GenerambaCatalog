@@ -1,0 +1,37 @@
+# Template information section
+name: "UIViewController+TableView"
+summary: "Swift module template with UITableView."
+author: "Beniamin Sarkisian"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Assembly layer
+- {name: Assembly/ModuleAssembly.swift, path: Code/Assembly/Assembly.swift.liquid}
+
+# Helpers layer
+- {name: Helpers/ModuleHelper.swift, path: Code/Helpers/ModuleHelper.swift.liquid}
+
+# DataConverter layer
+- {name: DataConverter/DataConverter.swift, path: Code/DataConverter/DataConverter.swift.liquid}
+
+# Cell layer
+- {name: DataSource/Cells/{{ module_info.name }}Cell/CellModel.swift, path: Code/Cell/Cell/CellModel.swift.liquid}
+- {name: DataSource/Cells/{{ module_info.name }}Cell/Cell.swift, path: Code/Cell/Cell/Cell.swift.liquid}
+- {name: DataSource/Cells/{{ module_info.name }}Cell/Cell.xib, path: Code/Cell/Cell/Cell.xib.liquid}
+
+# DataSource layer
+- {name: DataSource/DataSource.swift, path: Code/DataSource/DataSource.swift.liquid}
+
+# Router layer
+- {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
+
+# ViewModel layer
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/ViewModel.swift.liquid}
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
+- {name: View/ViewController.xib, path: Code/View/ViewController.xib.liquid}

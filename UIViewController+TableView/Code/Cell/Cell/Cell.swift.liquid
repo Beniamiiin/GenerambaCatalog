@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+import UIKit
+
+final class {{ module_info.name }}Cell: UITableViewCell, CellProtocol {
+    
+    // MARK: - CellProtocol
+    
+    func setup(withModel model: CellModelProtocol) {
+    	let model = model as! {{ module_info.name }}CellModel
+    }
+
+}

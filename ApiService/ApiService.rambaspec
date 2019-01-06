@@ -1,0 +1,14 @@
+# Template information section
+name: "ApiService"
+summary: "Api service template"
+author: "Beniamin Sarkisian"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+- {name: Api.swift, path: Code/Api.swift.liquid}
+- {name: ApiService.swift, path: Code/ApiService.swift.liquid}
+- {name: ApiServiceProtocol.swift, path: Code/ApiServiceProtocol.swift.liquid}

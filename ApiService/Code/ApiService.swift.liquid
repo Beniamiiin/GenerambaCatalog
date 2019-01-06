@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+import Moya
+import RxSwift
+
+final class {{ module_info.name }}ApiService: {{ module_info.name }}ApiServiceProtocol {
+    
+    // MARK: - External dependencies
+    
+    var provider: MoyaProvider<{{ module_info.name }}Api>!
+    
+    // MARK: - {{ module_info.name }}ApiServiceProtocol
+    
+}

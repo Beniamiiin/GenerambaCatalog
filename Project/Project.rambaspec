@@ -1,0 +1,36 @@
+# Template information section
+name: "Project"
+summary: "Xcode project template"
+author: "Beniamin Sarkisian"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Classes
+- {name: Classes/Application/App Delegates/AppDelegateAssembly.swift, path: Code/Classes/Application/App Delegates/AppDelegateAssembly.swift.liquid}
+- {name: Classes/Application/App Delegates/AppDelegate.swift, path: Code/Classes/Application/App Delegates/AppDelegate.swift.liquid}
+- {name: Classes/Application/App Delegates/LaunchAppDelegate/LaunchAppDelegate.swift, path: Code/Classes/Application/App Delegates/LaunchAppDelegate/LaunchAppDelegate.swift.liquid}
+- {name: Classes/Constants}
+- {name: Classes/Core Components/CoreComponentsAssembly.swift, path: Code/Classes/Core Components/CoreComponentsAssembly.swift.liquid}
+- {name: Classes/Core Components/ThirdPartiesConfigurator/ThirdPartiesConfigurator.swift, path: Code/Classes/Core Components/ThirdPartiesConfigurator/ThirdPartiesConfigurator.swift.liquid}
+- {name: Classes/Core Components/ThirdPartiesConfigurator/ThirdPartiesConfiguratorProtocol.swift, path: Code/Classes/Core Components/ThirdPartiesConfigurator/ThirdPartiesConfiguratorProtocol.swift.liquid}
+- {name: Classes/Helpers/Extensions}
+- {name: Classes/Business Logic/ApiService/ApiServiceAssembly.swift, path: Code/Classes/Business Logic/ApiService/ApiServiceAssembly.swift.liquid}
+- {name: Classes/Business Logic/ApiService/PluginManager/PluginManager.swift, path: Code/Classes/Business Logic/ApiService/PluginManager/PluginManager.swift.liquid}
+- {name: Classes/Business Logic/ApiService/PluginManager/PluginManagerProtocol.swift, path: Code/Classes/Business Logic/ApiService/PluginManager/PluginManagerProtocol.swift.liquid}
+- {name: Classes/Business Logic/ApiService/Services}
+- {name: Classes/Models}
+- {name: Classes/Presentation/Base}
+- {name: Classes/Presentation/User Stories}
+
+# Resources
+- {name: Resources/Assets.xcassets/AppIcon.appiconset/Contents.json, path: Code/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json.liquid}
+- {name: Resources/Assets.xcassets/Contents.json, path: Code/Resources/Assets.xcassets/Contents.json.liquid}
+- {name: Resources/Fonts}
+- {name: Resources/Storyboards/LaunchScreen.storyboard, path: Code/Resources/Storyboards/LaunchScreen.storyboard.liquid}
+
+# Supporting files
+- {name: Supporting Files/Info.plist, path: Code/Supporting Files/Info.plist.liquid}

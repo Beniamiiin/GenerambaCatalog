@@ -1,0 +1,26 @@
+# Template information section
+name: "UIViewController"
+summary: "Swift module template with UIViewController."
+author: "Beniamin Sarkisian"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Assembly layer
+- {name: Assembly/ModuleAssembly.swift, path: Code/Assembly/Assembly.swift.liquid}
+
+# Helpers layer
+- {name: Helpers/ModuleHelper.swift, path: Code/Helpers/ModuleHelper.swift.liquid}
+
+# Router layer
+- {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
+
+# ViewModel layer
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/ViewModel.swift.liquid}
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
+- {name: View/ViewController.xib, path: Code/View/ViewController.xib.liquid}

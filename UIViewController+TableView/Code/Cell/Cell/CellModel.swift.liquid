@@ -1,0 +1,18 @@
+{% include 'header' %}
+
+import UIKit
+
+final class {{ module_info.name }}CellModel: CellModelProtocol {
+
+	// MARK: - CellModelProtocol
+
+    static var cellIdentifier: String = "{{ module_info.name }}CellIdentifier"
+    static var cellNib: UINib = UINib(nibName: "{{ module_info.name }}Cell", bundle: nil)
+    
+    var cellIdentifier: String = {{ module_info.name }}CellModel.cellIdentifier
+
+	// MARK: - Public variables
+
+	// MARK: - Initial functions
+	
+}

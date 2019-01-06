@@ -1,0 +1,43 @@
+{% include 'header' %}
+
+import Moya
+
+enum {{ module_info.name }}Api {
+    
+}
+
+extension {{ module_info.name }}Api: TargetType {
+    
+    var baseURL: URL {
+        fatalError()
+    }
+    
+    var path: String {
+        fatalError()
+    }
+    
+    var method: Moya.Method {
+        fatalError()
+    }
+    
+    var sampleData: Data {
+        fatalError()
+    }
+    
+    var task: Task {
+        fatalError()
+    }
+    
+    var headers: [String : String]? {
+        fatalError()
+    }
+    
+}
+
+extension {{ module_info.name }}Api: AccessTokenAuthorizable {
+    
+    var authorizationType: AuthorizationType {
+        fatalError()
+    }
+    
+}
