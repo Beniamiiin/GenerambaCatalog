@@ -1,0 +1,54 @@
+{% include 'header' %}
+
+import UIKit
+import RxSwift
+import RxCocoa
+import Routable
+import RxViewController
+
+final class {{ module_info.name }}ViewController: UIViewController, Routable {
+
+    // MARK: - External dependencies
+    
+    var output: {{ module_info.name }}ViewOutput! {
+        didSet {
+            self.rx
+                .viewDidLoad
+                .bind(onNext: output.didTriggerViewReadyEvent)
+                .disposed(by: disposeBag)
+        }
+    }
+    
+    // MARK: - Private variables
+    
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Override functions
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupRx()
+    }
+
+}
+
+// MARK: {{module_info.name}}ViewInput
+  
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {
+	
+	func setupInitialState() {
+		
+    }
+
+}
+
+// MARK: - Private functions
+
+extension {{ module_info.name }}ViewController {
+    
+    private func setupRx() {
+        
+    }
+    
+}

@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+import Routable
+
+final class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+
+	// MARK: - External dependencies
+	
+	weak var transitionHandler: Routable!
+
+	// MARK: {{ module_info.name }}RouterInput
+
+}

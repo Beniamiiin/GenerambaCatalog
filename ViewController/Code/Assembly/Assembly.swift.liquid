@@ -1,0 +1,43 @@
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Swinject
+import SwinjectStoryboard
+
+final class {{ module_info.name }}ModuleAssembly: Assembly {
+    
+    func assemble(container: Container) {
+        var view: {{ module_info.name }}ViewController?
+        
+        container.storyboardInitCompleted({{ module_info.name }}ViewController.self) { (r, m) in
+            view = m
+            m.output = r.resolve({{ module_info.name }}Presenter.self)
+        }
+        
+        container.register({{ module_info.name }}Presenter.self) { r in
+            let presenter = {{ module_info.name }}Presenter()
+            presenter.view = view
+            presenter.router = r.resolve({{ module_info.name }}Router.self)
+            presenter.interactor = r.resolve({{ module_info.name }}Interactor.self)
+            return presenter
+        }.inObjectScope(.container)
+        
+        container.register({{ module_info.name }}Router.self) { r in
+            return {{ module_info.name }}Router()
+        }.initCompleted { r, m in
+            m.transitionHandler = view
+        }
+        
+        container.register({{ module_info.name }}Interactor.self) { r in
+            return {{ module_info.name }}Interactor()
+        }.initCompleted { r, m in
+            m.output = r.resolve({{ module_info.name }}Presenter.self)
+        }
+    }
+    
+}

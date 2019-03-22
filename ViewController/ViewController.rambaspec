@@ -1,0 +1,31 @@
+# Template information section
+name: "ViewController"
+summary: "Swift module template with UIViewController."
+author: "Beniamin Sarkisian"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Assembly layer
+- {name: Assembly/ModuleAssembly.swift, path: Code/Assembly/Assembly.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/Interactor.swift, path: Code/Interactor/Interactor.swift.liquid}
+- {name: Interactor/InteractorInput.swift, path: Code/Interactor/InteractorInput.swift.liquid}
+- {name: Interactor/InteractorOutput.swift, path: Code/Interactor/InteractorOutput.swift.liquid}
+
+# Router layer
+- {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
+- {name: Router/RouterInput.swift, path: Code/Router/RouterInput.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
+- {name: Presenter/ModuleInput.swift, path: Code/Presenter/ModuleInput.swift.liquid}
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
+- {name: View/ViewInput.swift, path: Code/View/ViewInput.swift.liquid}
+- {name: View/ViewOutput.swift, path: Code/View/ViewOutput.swift.liquid}

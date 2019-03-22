@@ -1,0 +1,15 @@
+{% include 'header' %}
+
+final class {{ module_info.name }}Interactor {
+
+	// MARK: - External dependencies
+
+    weak var output: {{ module_info.name }}InteractorOutput!
+
+}
+
+// MARK: {{ module_info.name }}InteractorInput
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
+	
+}
